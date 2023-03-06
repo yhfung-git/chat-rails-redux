@@ -3,12 +3,12 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :channels, only: [] do
-        resources :messages, only: [ :index, :create ]
+      resources :channels, only: %i[] do
+        resources :messages, only: %i[index create]
       end
     end
   end
 
-  # resources :channels, only: [ :show ]
+  # resources :channels, only: %i[show]
   # root to: 'channels#show'
 end
