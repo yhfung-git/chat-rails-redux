@@ -54,7 +54,15 @@ body {
 
 .channels-container > ul > li.active {
   font-weight: 600;
-  color: black
+  a {
+    color: #D23333;
+    font-weight: bold;
+  }
+}
+
+.channels-container > ul > li > a {
+  text-decoration: none;
+  color: grey;
 }
 
 /* Column 3/3 *****************************************************************/
