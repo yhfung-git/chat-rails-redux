@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # resources :channels, only: %i[show]
-  # root to: 'channels#show'
+  resources :channels, only: %i[show]
+  root to: 'channels#show'
 end
