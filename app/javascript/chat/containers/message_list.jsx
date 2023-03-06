@@ -13,6 +13,9 @@ class MessageList extends Component {
     if (App.cable) { // Check if App.cable exists
       this.subscribeActionCable(this.props);
     }
+    setInterval(() => {
+      this.fetchMessages(this.props.selectedChannel);
+    }, 1000);
   }
 
   componentDidUpdate(nextProps) { // For after switching channels
